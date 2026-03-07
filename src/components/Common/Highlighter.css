@@ -1,0 +1,54 @@
+/* ===== UNDERLINE HIGHLIGHTER COMPONENT ===== */
+
+.highlighter-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.highlighter-svg {
+  position: absolute;
+  left: -2%;
+  bottom: -2px;
+  width: 104%;
+  height: 14px;
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;
+}
+
+/* Both paths hidden until animation triggers */
+.highlighter-path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  transition: none;
+}
+
+/* ─── Animate when .highlighter-animate is added ─── */
+.highlighter-animate .highlighter-path {
+  animation: highlighterDraw 1s ease-out forwards;
+}
+
+.highlighter-animate .highlighter-path-secondary {
+  animation: highlighterDraw 0.9s ease-out 0.25s forwards;
+}
+
+@keyframes highlighterDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ─── Responsive sizing ─── */
+@media (max-width: 768px) {
+  .highlighter-svg {
+    height: 10px;
+    bottom: -1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlighter-svg {
+    height: 8px;
+    bottom: 0;
+  }
+}
