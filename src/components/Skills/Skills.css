@@ -109,7 +109,7 @@
     animation-range: entry 0% cover 30%;
 }
 
-/* .skills-categories {
+.skills-categories {
     animation: scrollFadeUp 3s ease-in-out both;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
@@ -125,7 +125,7 @@
     animation: scrollZoomIn 3s ease-in-out both;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
-} */
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
