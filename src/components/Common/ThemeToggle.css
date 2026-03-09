@@ -1,0 +1,74 @@
+/* ===== THEME TOGGLE BUTTON ===== */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--clr-surface);
+    border: 1.5px solid var(--clr-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    color: var(--clr-text-secondary);
+    position: relative;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 1001;
+    transition: color var(--transition-fast),
+                background var(--transition-fast),
+                border-color var(--transition-fast),
+                transform var(--transition-fast),
+                box-shadow var(--transition-fast);
+}
+
+.theme-toggle:hover {
+    color: var(--clr-primary);
+    border-color: var(--clr-primary);
+    background: var(--clr-primary-bg);
+    transform: scale(1.08);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.08);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+    transition-duration: 0.1s;
+}
+
+/* Both icons sit on top of each other; only .visible is shown */
+.theme-icon {
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.5) rotate(90deg);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    pointer-events: none;
+}
+
+.theme-icon.visible {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .theme-toggle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .theme-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .theme-icon {
+        width: 16px;
+        height: 16px;
+    }
+}

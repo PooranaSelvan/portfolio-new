@@ -1,41 +1,35 @@
-import { heroData, personalInfo } from '../../data/portfolioData';
-import { ArrowRight } from '../Common/Icons';
+import { heroData, personalInfo, socialLinks } from '../../data/portfolioData';
+import { ArrowRight, getSocialIcon } from '../Common/Icons';
 import Highlighter from '../Common/Highlighter';
 import HeroVisual from './HeroVisual';
 import './Hero.css';
 
-const PARTICLE_COUNT = 300;
 function randomBetween(min, max) {
   return min + Math.random() * (max - min);
 }
-const particles = [];
 
-for (let i = 0; i < PARTICLE_COUNT; i++) {
-  particles.push({
-    id: i,
-
-    // Random position on screen (0% to 100%)
-    left: randomBetween(0, 100),
-    top: randomBetween(0, 100),
-
-    // Random dot size (small: 1.5px → large: 4px)
-    size: randomBetween(1.5, 4),
-
-    // Random transparency (subtle: 0.12 → slightly visible: 0.37)
-    opacity: randomBetween(0.12, 0.37),
-
-    // How long one full float cycle takes (slow: 12s → very slow: 30s)
-    duration: randomBetween(12, 30),
-
-    // Negative delay so all particles start at different points
-    // in their animation — prevents them from moving in sync
-    delay: -randomBetween(0, 20),
-
-    // How far the particle drifts horizontally and vertically
-    driftX: randomBetween(-30, 30),
-    driftY: randomBetween(-40, 40),
-  });
+function generateParticles(count) {
+  const result = [];
+  for (let i = 0; i < count; i++) {
+    result.push({
+      id: i,
+      left: randomBetween(0, 100),
+      top: randomBetween(0, 100),
+      size: randomBetween(1.5, 4),
+      opacity: randomBetween(0.12, 0.37),
+      duration: randomBetween(12, 30),
+      delay: -randomBetween(0, 20),
+      driftX: randomBetween(-30, 30),
+      driftY: randomBetween(-40, 40),
+    });
+  }
+  return result;
 }
+
+// Generate fewer particles for mobile devices for better performance
+const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+const PARTICLE_COUNT = isMobile ? 80 : 300;
+const particles = generateParticles(PARTICLE_COUNT);
 
 export default function Hero() {
   const handleNavClick = (e, id) => {
@@ -74,8 +68,6 @@ export default function Hero() {
             </Highlighter>
           </h1>
 
-          <p className="hero-subtitle">{personalInfo.title}</p>
-
           <p className="hero-description">{heroData.description}</p>
 
           <div className="hero-actions">
@@ -86,6 +78,18 @@ export default function Hero() {
             <button className="btn btn-outline" onClick={(e) => handleNavClick(e, 'contact')}>
               <span>Connect with me</span>
             </button>
+          </div>
+
+          <div className="hero-socials">
+            {socialLinks.map((link) => {
+              const Icon = getSocialIcon(link.icon);
+              return (
+                <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="hero-social-link" aria-label={link.name}>
+                  <Icon size={20} />
+                  <span className="hero-social-tooltip">{link.name}</span>
+                </a>
+              );
+            })}
           </div>
         </div>
 

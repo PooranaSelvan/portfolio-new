@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { personalInfo, socialLinks } from '../../data/portfolioData';
-import { Mail, Send, getSocialIcon } from '../Common/Icons';
+import { Mail, Send, IdBadge, MapPin, getSocialIcon } from '../Common/Icons';
 import './Contact.css';
 
 function isValidEmail(email) {
@@ -85,7 +85,7 @@ export default function Contact() {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">
-            Get in <span className="gradient-text">Touch</span>
+            Eager to Learn <span className="gradient-text">Together</span>
           </h2>
         </div>
 
@@ -103,7 +103,7 @@ export default function Contact() {
 
             <div className="contact-card">
               <div className="contact-icon">
-                <Mail />
+                <IdBadge />
               </div>
               <div>
                 <h4>EMP ID</h4>
@@ -111,13 +111,23 @@ export default function Contact() {
               </div>
             </div>
 
+            <div className="contact-card">
+              <div className="contact-icon">
+                <MapPin />
+              </div>
+              <div>
+                <h4>Location</h4>
+                <p>Tenkasi, Tamilnadu</p>
+              </div>
+            </div>
 
-            <div className="social-links">
+            <div className="contact-socials">
               {socialLinks.map((link) => {
-                const IconComponent = getSocialIcon(link.icon);
+                const Icon = getSocialIcon(link.icon);
                 return (
-                  <a key={link.name} href={link.url} className="social-link" aria-label={link.name} target="_blank" rel="noopener noreferrer">
-                    <IconComponent />
+                  <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="contact-social-link" aria-label={link.name}>
+                    <Icon size={20} />
+                    <span className="contact-social-tooltip">{link.name}</span>
                   </a>
                 );
               })}
@@ -147,7 +157,7 @@ export default function Contact() {
               </div>
 
               <button type="submit" className="btn btn-primary btn-full" disabled={isSubmitting}>
-                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                <span>{isSubmitting ? 'Saying Hello...' : 'Say Hello'}</span>
                 <Send />
               </button>
 
