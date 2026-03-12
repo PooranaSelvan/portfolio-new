@@ -8,6 +8,7 @@ const filters = [
   { key: 'group', label: 'Group Project' },
   { key: 'frontend', label: 'Frontend' },
   { key: 'backend', label: 'Backend' },
+  { key: 'vibe', label: 'Vibe Coded' },
   { key: 'scratch', label: 'Scratch' }
 ];
 

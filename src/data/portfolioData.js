@@ -98,6 +98,16 @@ export const projectsData = [
   },
   {
     id: 5,
+    title: 'WebToolKit',
+    description: 'A modern developer toolkit built with React JS, Tailwind CSS, and DaisyUI that gives easy to use web tools to ease everyday development tasks.',
+    tags: ['React JS', 'Tailwind CSS', 'Daisy UI'],
+    category: 'vibe',
+    icon: 'vibe.png',
+    codeUrl : 'https://github.com/PooranaSelvan/Developer-Toolbox',
+    liveUrl : 'https://poorana-webtoolkit.vercel.app/'
+  },
+  {
+    id: 6,
     title: 'React Poster Site',
     description: 'A 2-player boxing game developed in Scratch featuring sprite animations, player controls, and interactive gameplay mechanics.',
     tags: ['React JS', "Node JS"],
@@ -106,7 +116,7 @@ export const projectsData = [
     codeUrl: 'https://github.com/PooranaSelvan/React-Post-Site'
   },
   {
-    id: 6,
+    id: 7,
     title: 'Pixel Art',
     description: 'A web-based pixel art drawing application that lets users create colorful designs on an interactive grid canvas.',
     tags: ['HTML', 'CSS', 'JavaScript'],
@@ -116,7 +126,7 @@ export const projectsData = [
     codeUrl: 'https://github.com/PooranaSelvan/Pixel-Art',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Planets Fact Site',
     description: 'A responsive planet facts website that provides information about each planet in the solar system using dynamic templates.',
     tags: ['HTML', 'CSS', 'Node JS', "EJS"],
@@ -126,7 +136,7 @@ export const projectsData = [
     codeUrl: 'https://github.com/PooranaSelvan/Planet-Fact-Site',
   },
   {
-    id: 8,
+    id: 9,
     title: 'Rock Paper Scissors',
     description: 'An interactive game where users play Rock Paper Scissors against the computer & players and score tracking.',
     tags: ['HTML', 'CSS', 'Node JS', "Socket IO"],
@@ -136,7 +146,7 @@ export const projectsData = [
     codeUrl: 'https://github.com/PooranaSelvan/rock_paper-Scissors_game',
   },
   {
-    id: 9,
+    id: 10,
     title: 'Bank Account Simulation',
     description: 'A JavaScript-based banking simulation that demonstrates basic banking operations such as deposit, withdrawal, and balance tracking.',
     tags: ['HTML', 'CSS', 'JavaScript'],
@@ -146,7 +156,7 @@ export const projectsData = [
     codeUrl: 'https://github.com/PooranaSelvan/Bank-Account-Simulation',
   },
   {
-    id: 10,
+    id: 11,
     title: 'Clash of Fists',
     description: 'A 2-player boxing game developed in Scratch featuring sprite animations, player controls, and interactive gameplay mechanics.',
     tags: ['Scratch'],
