@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { projectsData } from '../../data/portfolioData';
-import { ExternalLink } from '../Common/Icons';
+import { ExternalLink, VSCodeLogo } from '../Common/Icons';
 import './Projects.css';
 
 const filters = [
@@ -119,6 +119,11 @@ export default function Projects() {
                     {project.liveUrl && (
                       <a href={project.liveUrl} target='_blank' className="project-link" aria-label="View live demo">
                         <ExternalLink />
+                      </a>
+                    )}
+                    {project.vsCodeURL && (
+                      <a href={project.vsCodeURL} target='_blank' className="project-link" aria-label="VS Code Extension">
+                        <VSCodeLogo />
                       </a>
                     )}
                   </div>

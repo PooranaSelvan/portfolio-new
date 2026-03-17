@@ -98,13 +98,14 @@ export const projectsData = [
   },
   {
     id: 5,
-    title: 'WebToolKit',
+    title: 'WebToolKit (Vibe Coded)',
     description: 'A modern developer toolkit built with React JS, Tailwind CSS, and DaisyUI that gives easy to use web tools to ease everyday development tasks.',
     tags: ['React JS', 'Tailwind CSS', 'Daisy UI'],
     category: 'vibe',
     icon: 'vibe.png',
     codeUrl : 'https://github.com/PooranaSelvan/Developer-Toolbox',
-    liveUrl : 'https://poorana-webtoolkit.vercel.app/'
+    liveUrl : 'https://poorana-webtoolkit.vercel.app/',
+    vsCodeURL : 'https://marketplace.visualstudio.com/items?itemName=developer-toolbox.developer-toolbox'
   },
   {
     id: 6,
