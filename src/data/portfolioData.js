@@ -30,8 +30,9 @@ export const skillsData = [
       { icon: 'https://imgs.search.brave.com/3THbBPOYMOWPQteMA07YJar1bKVA7AIxdseL8wlDDJY/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly9oZXht/b3MuY29tL2ZyZWVk/ZXZ0b29scy9zdmdf/aWNvbnMvZXhwcmVz/cy9leHByZXNzLWxv/Z29zLnN2Zw', name: 'Express JS' },
       { icon: 'https://imgs.search.brave.com/fzEGW05T2x0M5Ag3GZswX8C57sskLVVwlcjBo4W_U50/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNDgv/MzMyLzE1MC9zbWFs/bC9qYXZhLXByb2dy/YW1taW5nLWxhbmd1/YWdlLWphdmEtbG9n/by1mcmVlLXBuZy5w/bmc', name: 'Java' },
       { icon: 'https://imgs.search.brave.com/AU2hqEZi6P-WkXNU8Kv_QuAUx0h8I_MhENe-YodeIIE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wbmdp/bWcuY29tL3VwbG9h/ZHMvbXlzcWwvbXlz/cWxfUE5HMjMucG5n', name: 'MySQL' },
-      { icon: '/mickey.svg', name: 'Mickey Framework' },
-      { icon: 'https://imgs.search.brave.com/dplytRapgzplam0MGsWkPuYRtB5aM6J3Uc-2NPDN2rk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LW1vbmdvZGItbG9n/by1pY29uLXN2Zy1k/b3dubG9hZC1wbmct/Mjk0NTEyMC5wbmc_/Zj13ZWJwJnc9MjU2', name: 'Mongo DB' }
+      { icon: '/mickey.svg', name: 'Mickey' },
+      { icon: 'https://imgs.search.brave.com/dplytRapgzplam0MGsWkPuYRtB5aM6J3Uc-2NPDN2rk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LW1vbmdvZGItbG9n/by1pY29uLXN2Zy1k/b3dubG9hZC1wbmct/Mjk0NTEyMC5wbmc_/Zj13ZWJwJnc9MjU2', name: 'Mongo DB' },
+      { icon : 'https://imgs.search.brave.com/zAT_plEq7It5rfMtEaiGkU60CDDqL0B0NOOuZF6FSGw/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly93d3cu/ZnJlZWxvZ292ZWN0/b3JzLm5ldC93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxOS8wOS9y/ZWRpc19sb2dvLnBu/Zw', name : 'Redis'}
     ],
   },
   {
